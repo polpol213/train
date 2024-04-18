@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Train Tracking</title>  <!-- Page title -->
+    <style>
+      .train {
+        /* Styles for train class elements*/
+        display: flex;  /* Display as a flex container*/
+        justify-content: space-between;  /* Distribute items evenly in the container*/
+        align-items: center;  /* Vertically center items*/
+        padding: 10px;  /* Add padding to the container*/
+        border-bottom: 1px solid #ccc;  /* Add bottom border*/
+      }
+      .train:nth-child(even) {
+        /* Styles for even train class elements*/
+        background-color: #f2f2f2;  /* Set background color*/
+      }
+      .train:last-child {
+        /* Styles for the last train class element*/
+        border-bottom: none;  /* Remove bottom border*/
+      }
+      .booking-form {
+        /* Styles for booking-form class elements*/
+        margin-top: 20px;  /* Add top margin*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Train Tracking</h1>  <!-- Page heading -->
+    <div class="train-list">
+      <!-- Container for the train list -->
+      <div class="train">
+        <!-- Individual train element -->
+        <span>Train 1</span>  <!-- Train name -->
+        <span>12:00</span>  <!-- Departure time -->
+        <span>14:00</span>  <!-- Arrival time -->
+        <button type="submit" name="train" value="1">Book</button>  <!-- Booking button -->
+      </div>
+      <!-- More train elements can be added here -->
+      <div class="train">
+        <!-- Individual train element -->
+        <span>Train 7</span>  <!-- Train name -->
+        <span>16:00</span>  <!-- Departure time -->
+        <span>18:00</span>  <!-- Arrival time -->
+        <button type="submit" name="train" value="7">Book</button>  <!-- Booking button -->
+      </div>
+      <!-- More train elements can be added here -->
+    </div>
+    <h2>Book a Ticket</h2>  <!-- Heading for the booking form -->
+    <form class="booking-form" action="/book" method="post">
+      <!-- Booking form -->
+      <label for="train">Train:</label><br>
+      <!-- Train selection label -->
+      <select id="train" name="train">
+        <!-- Train selection dropdown -->
+        <option value="1">Train 1</option>
+        <!-- Option for Train 1 -->
+        <!-- More train options can be added here -->
+        <option value="7">Train 7</option>
+        <!-- Option for Train 7 -->
+      </select><br>
+      <label for="name">Name:</label><br>
+      <!-- Name input label -->
+      <input type="text" id="name" name="name"><br>
+      <!-- Name input field -->
+      <label for="email">Email:</label><br>
+      <!-- Email input label -->
+      <input type="email" id="email" name="email"><br>
+      <!-- Email input field -->
+      <input type="submit" value="Book">
+      <!-- Submit button for the form -->
+    </form>
+  </body>
+</html>
